@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                position: fixed;
+                background: rgba(25, 25, 25, 255);
+            }
+            canvas {
+                width: 100%;
+                height: 100%;
+                outline: none;
+            }
+
+            #container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .spline-watermark {
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                width: 32px;
+                height: 32px;
+                z-index: 2;
+            }
+            .spline-watermark:hover {
+                opacity: 0.8;
+            }
+            .spline-watermark img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <title>Untitled</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png"
+            sizes="16x16"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://app.spline.design/_assets/_icons/icon_favicon32x32.png"
+            sizes="32x32"
+        />
+
+        <link rel="preload" href="./scene.json" as="fetch" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+            integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-nft.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <canvas id="canvas3d"></canvas>
+
+            <a class="spline-watermark" href="https://spline.design">
+                <img
+                    src="https://app.spline.design/_assets/_icons/icon_favicon32x32.png"
+                />
+            </a>
+        </div>
+
+        <script type="module">
+            // const video = document.querySelector('#video');
+
+            // if (navigator.mediaDevices.getUserMedia) {
+            //     navigator.mediaDevices
+            //         .getUserMedia({ video: true })
+            //         .then(function (stream) {
+            //             video.srcObject = stream;
+            //         })
+            //         .catch(function (err0r) {
+            //             console.log('Something went wrong!');
+            //         });
+            // }
+
+            import { Application, THREE } from './runtime.js';
+
+            const app = new Application();
+            const data = await app.load('./scene.json');
+
+            const { scene, controls, renderer } = data;
+
+            console.log(scene);
+
+            renderer.setClearColor(0xffffff, 0);
+
+            var arToolkitSource = new THREEx.ArToolkitSource({
+                sourceType: 'webcam',
+                sourceWidth: 480,
+                sourceHeight: 640,
+            });
+
+            arToolkitSource.init(function onReady() {
+                // use a resize to fullscreen mobile devices
+                setTimeout(function () {
+                    onResize();
+                }, 1000);
+            });
+
+            // handle resize
+            window.addEventListener('resize', function () {
+                onResize();
+            });
+
+            // listener for end loading of NFT marker
+            window.addEventListener('arjs-nft-loaded', function (ev) {
+                console.log(ev);
+            });
+
+            function onResize() {
+                arToolkitSource.onResizeElement();
+                arToolkitSource.copyElementSizeTo(renderer.domElement);
+                if (arToolkitContext.arController !== null) {
+                    arToolkitSource.copyElementSizeTo(
+                        arToolkitContext.arController.canvas
+                    );
+                }
+            }
+
+            var arToolkitContext = new THREEx.ArToolkitContext(
+                {
+                    detectionMode: 'mono',
+                    canvasWidth: 480,
+                    canvasHeight: 640,
+                },
+                {
+                    sourceWidth: 480,
+                    sourceHeight: 640,
+                }
+            );
+
+            // initialize it
+            arToolkitContext.init(function onCompleted() {
+                // copy projection matrix to camera
+                camera.projectionMatrix.copy(
+                    arToolkitContext.getProjectionMatrix()
+                );
+            });
+
+            var markerControls = new THREEx.ArMarkerControls(
+                arToolkitContext,
+                camera,
+                {
+                    type: 'nft',
+                    descriptorsUrl: 'data/dataNFT/pinball',
+                    changeMatrixMode: 'cameraTransformMatrix',
+                }
+            );
+        </script>
+    </body>
+</html>

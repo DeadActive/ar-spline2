@@ -1,0 +1,497 @@
+{
+    "object": {
+        "uuid": "B6BEBD25-292C-4ECC-9729-2C0233CBC257",
+        "objectType": "Scene",
+        "name": "Untitled",
+        "matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+        "layers": 1,
+        "children": [
+            {
+                "uuid": "258969B9-9DE2-4B1B-A4C6-B490BA8A4DD6",
+                "objectType": "Mesh3D",
+                "name": "Dodecahedron",
+                "matrix": [
+                    0.7695828303823053, -0.004582468729064988,
+                    -0.6385305538195544, 0, 0.10815781335455812,
+                    -0.9845897812370632, 0.13742216012678848, 0,
+                    0.6293203910498374, 0.17481980340882225, 0.7572277608124127,
+                    0, 0, 0, 208.6587471315039, 1
+                ],
+                "castShadow": true,
+                "receiveShadow": true,
+                "layers": 1,
+                "hiddenMatrix": [
+                    1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+                ],
+                "interaction": {
+                    "uuid": "492CDE63-E659-4146-A038-9475A927AAE6",
+                    "selectedState": 0,
+                    "states": ["AE97F676-83D8-481D-8514-EE68EEB68302"],
+                    "events": [
+                        {
+                            "type": 7,
+                            "ui": { "isCollapsed": false },
+                            "targets": [
+                                {
+                                    "easing": 4,
+                                    "duration": 1000,
+                                    "delay": 0,
+                                    "cubicControls": [0.5, 0.05, 0.1, 0.3],
+                                    "springParameters": {
+                                        "mass": 1,
+                                        "stiffness": 80,
+                                        "damping": 10,
+                                        "velocity": 0
+                                    },
+                                    "repeat": true,
+                                    "cycle": true,
+                                    "object": "258969B9-9DE2-4B1B-A4C6-B490BA8A4DD6"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "geometry": "BE2D7E26-D50D-4CBE-9578-DFF3A7D0B51E",
+                "material": "AEC7D5B1-31D0-495F-8BF3-1F4B5986CC38"
+            },
+            {
+                "uuid": "3B695796-4617-4F45-BF86-E0B33A41DF6B",
+                "objectType": "CombinedCamera",
+                "name": "Default Camera",
+                "matrix": [
+                    1, 0, 0, 0, 0, 1, -6.123233995736766e-17, 0, 0,
+                    6.123233995736766e-17, 1, 0, 0, 6.123233995736766e-14, 1000,
+                    1
+                ],
+                "layers": 1,
+                "children": [
+                    {
+                        "uuid": "E3F6D54D-4262-4F48-815D-87A431E15474",
+                        "type": "DirectionalLight",
+                        "name": "Default Directional Light",
+                        "layers": 1,
+                        "matrix": [
+                            1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 850000, 1300000,
+                            1000000, 1
+                        ],
+                        "color": 16777215,
+                        "intensity": 0.75,
+                        "shadow": {
+                            "camera": {
+                                "uuid": "A365B353-F1AA-4566-BF6A-A7B546E473F0",
+                                "type": "OrthographicCamera",
+                                "layers": 1,
+                                "zoom": 1,
+                                "left": -5,
+                                "right": 5,
+                                "top": 5,
+                                "bottom": -5,
+                                "near": 0.5,
+                                "far": 500
+                            }
+                        }
+                    }
+                ],
+                "hiddenMatrix": [
+                    1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
+                ],
+                "interaction": {
+                    "uuid": "B2468481-CBDD-4F0F-B576-73B5F8EA49C6"
+                },
+                "enableHelper": false,
+                "cameraType": "OrthographicCamera",
+                "targetOffset": 1000,
+                "isUpVectorFlipped": false,
+                "angleOffsetFromUp": 0,
+                "left": -960,
+                "right": 960,
+                "top": 489.5,
+                "bottom": -489.5,
+                "zoomOrtho": 0.7350918906249999,
+                "nearOrtho": -50000,
+                "far": 50000,
+                "aspect": 1.9611848825331972,
+                "fov": 45,
+                "focus": 10,
+                "filmGauge": 35,
+                "filmOffset": 0,
+                "zoomPersp": 1,
+                "nearPersp": 50
+            },
+            {
+                "uuid": "36878CE4-1A1A-40E5-B27A-7718B3714A24",
+                "type": "HemisphereLight",
+                "name": "Default Ambient Light",
+                "layers": 1,
+                "matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1],
+                "color": 13882323,
+                "intensity": 0.75,
+                "groundColor": 8553090
+            }
+        ],
+        "activeCamera": "3B695796-4617-4F45-BF86-E0B33A41DF6B",
+        "camera": "3B695796-4617-4F45-BF86-E0B33A41DF6B",
+        "directionalLight": "E3F6D54D-4262-4F48-815D-87A431E15474",
+        "ambientLight": "36878CE4-1A1A-40E5-B27A-7718B3714A24",
+        "color": [
+            0.09803921568627451, 0.09803921568627451, 0.09803921568627451
+        ],
+        "alpha": 0,
+        "directionalLightState": true,
+        "ambientLightState": true,
+        "canvas": {
+            "mode": 1,
+            "editorSize": { "width": 1920, "height": 979 },
+            "color": [0, 0, 0, 0.5]
+        },
+        "postprocessing": {
+            "enabled": false,
+            "bloom": {
+                "enabled": true,
+                "opacity": 1,
+                "blendFunction": 16,
+                "intensity": 1,
+                "luminanceThreshold": 0.9,
+                "luminanceSmoothing": 0.025,
+                "blurScale": 1,
+                "kernelSize": 3
+            },
+            "chromaticAberration": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "offset": [10, 10]
+            },
+            "vignette": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "eskil": false,
+                "darkness": 0.5,
+                "offset": 0.5
+            },
+            "noise": { "enabled": false, "opacity": 1, "blendFunction": 14 },
+            "colorAverage": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13
+            },
+            "hueSaturation": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "_hue": 0,
+                "hue": 0,
+                "saturation": 0
+            },
+            "brightnessContrast": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "contrast": 0,
+                "brightness": 0
+            },
+            "depthOfField": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "focalLength": 0.1,
+                "focusDistance": 0,
+                "bokehScale": 1
+            },
+            "pixelation": {
+                "enabled": false,
+                "opacity": 1,
+                "blendFunction": 13,
+                "granularity": 30
+            }
+        }
+    },
+    "metadata": {
+        "version": 1.5,
+        "type": "Object",
+        "generator": "Object3D.toJSON"
+    },
+    "geometries": [
+        {
+            "uuid": "BE2D7E26-D50D-4CBE-9578-DFF3A7D0B51E",
+            "userData": {
+                "parameters": {
+                    "width": 714,
+                    "detail": 0,
+                    "corner": 0.17,
+                    "cornerSides": 4,
+                    "height": 709,
+                    "depth": 714
+                },
+                "type": "DodecahedronGeometry"
+            }
+        }
+    ],
+    "materials": [
+        {
+            "uuid": "AEC7D5B1-31D0-495F-8BF3-1F4B5986CC38",
+            "type": "ShaderMaterial",
+            "transparent": true,
+            "depthFunc": 3,
+            "depthTest": true,
+            "depthWrite": true,
+            "colorWrite": true,
+            "stencilWrite": false,
+            "stencilWriteMask": 255,
+            "stencilFunc": 519,
+            "stencilRef": 0,
+            "stencilFuncMask": 255,
+            "stencilFail": 7680,
+            "stencilZFail": 7680,
+            "stencilZPass": 7680,
+            "dithering": true,
+            "wireframeLinecap": "",
+            "wireframeLinejoin": "",
+            "userData": {
+                "type": "PhongMaterial",
+                "category": "Phong",
+                "nodeType": "PhongNodeMaterial",
+                "layers": {
+                    "id": 2,
+                    "uuid": "DF0E4527-2725-4692-8C8B-3B338E258466",
+                    "head": {
+                        "id": 0,
+                        "type": "color",
+                        "defines": {},
+                        "uniforms": {
+                            "f0_color": "540BF348-FF1A-408A-9D87-C92D7FF8A8E7",
+                            "f0_alpha": "D2111F23-BF94-4B9B-A125-6D69F0487D8A",
+                            "f0_mode": "DF7279BA-CF1B-49C2-9E98-03571B86769B"
+                        },
+                        "next": {
+                            "id": 1,
+                            "type": "light",
+                            "defines": {},
+                            "uniforms": {
+                                "f1_alpha": "23A077D5-12EA-4ECB-9263-3AD701200A1C",
+                                "f1_mode": "72A0F6F2-A24E-4FBF-A918-DE380C524781",
+                                "f1_shininess": "EE69054E-041D-404D-B64C-8F78E98AA341",
+                                "f1_specular": "B7C1EE95-C617-462B-B230-62C701C017ED"
+                            }
+                        }
+                    }
+                }
+            },
+            "glslVersion": null,
+            "defines": { "PHONG": 1 },
+            "extensions": { "derivatives": true },
+            "vertex": "FDB2E609-9A6C-4916-B38C-E04612D7D5D9",
+            "fragment": "FDB2E609-9A6C-4916-B38C-E04612D7D5D9"
+        }
+    ],
+    "interactionStates": [
+        {
+            "uuid": "AE97F676-83D8-481D-8514-EE68EEB68302",
+            "name": "Base State",
+            "position": [0, 0, 208.6587471315039],
+            "rotation": [
+                -0.22689280275926285,
+                0.6806784082777885,
+                0.13962634015954636,
+                "XYZ"
+            ],
+            "scale": [1, -1, 1],
+            "hiddenMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+            "geometry": { "width": 714, "height": 709, "depth": 714 },
+            "material": {
+                "layersList": [
+                    {
+                        "id": 0,
+                        "type": "color",
+                        "defines": {},
+                        "uniforms": {
+                            "f0_color": "F338A813-26CD-4A82-8A59-7514748E66AC",
+                            "f0_alpha": "5B3F69AE-47B5-4618-8875-121246D7DCA9",
+                            "f0_mode": "91A30073-F2AA-40A3-A4CB-7802D4C9F04B"
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "type": "light",
+                        "defines": {},
+                        "uniforms": {
+                            "f1_alpha": "8EC4CB0E-2FBC-4552-8C7C-687A66E8CF1B",
+                            "f1_mode": "8AF0BE24-EF06-4155-9726-780F06644459",
+                            "f1_shininess": "51F934FF-013C-4DA7-8B3D-68FEC674013A",
+                            "f1_specular": "1A64D8C9-F4B3-4D09-B8E5-FC5C52702A7C"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "nodes": [
+        {
+            "uuid": "F338A813-26CD-4A82-8A59-7514748E66AC",
+            "type": "c",
+            "r": 0.5333333333333333,
+            "g": 1,
+            "b": 0.42745098039215684,
+            "value": 8978285,
+            "alpha": "8D7817FF-988D-4F9F-AC5A-68163865EF15",
+            "nodeType": "Color"
+        },
+        {
+            "uuid": "8D7817FF-988D-4F9F-AC5A-68163865EF15",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "5B3F69AE-47B5-4618-8875-121246D7DCA9",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "91A30073-F2AA-40A3-A4CB-7802D4C9F04B",
+            "type": "i",
+            "value": 0,
+            "nodeType": "Int"
+        },
+        {
+            "uuid": "8EC4CB0E-2FBC-4552-8C7C-687A66E8CF1B",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "8AF0BE24-EF06-4155-9726-780F06644459",
+            "type": "i",
+            "value": 0,
+            "nodeType": "Int"
+        },
+        {
+            "uuid": "51F934FF-013C-4DA7-8B3D-68FEC674013A",
+            "type": "f",
+            "value": 30,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "1A64D8C9-F4B3-4D09-B8E5-FC5C52702A7C",
+            "type": "c",
+            "r": 0.06666666666666667,
+            "g": 0.06666666666666667,
+            "b": 0.06666666666666667,
+            "value": 1118481,
+            "nodeType": "Color"
+        },
+        {
+            "uuid": "540BF348-FF1A-408A-9D87-C92D7FF8A8E7",
+            "type": "c",
+            "r": 0.5333333333333333,
+            "g": 1,
+            "b": 0.42745098039215684,
+            "value": 8978285,
+            "alpha": "D2111F23-BF94-4B9B-A125-6D69F0487D8A",
+            "nodeType": "Color"
+        },
+        {
+            "uuid": "D2111F23-BF94-4B9B-A125-6D69F0487D8A",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "DF7279BA-CF1B-49C2-9E98-03571B86769B",
+            "type": "i",
+            "value": 0,
+            "nodeType": "Int"
+        },
+        {
+            "uuid": "23A077D5-12EA-4ECB-9263-3AD701200A1C",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "72A0F6F2-A24E-4FBF-A918-DE380C524781",
+            "type": "i",
+            "value": 0,
+            "nodeType": "Int"
+        },
+        {
+            "uuid": "EE69054E-041D-404D-B64C-8F78E98AA341",
+            "type": "f",
+            "value": 30,
+            "nodeType": "Float"
+        },
+        {
+            "uuid": "B7C1EE95-C617-462B-B230-62C701C017ED",
+            "type": "c",
+            "r": 0.06666666666666667,
+            "g": 0.06666666666666667,
+            "b": 0.06666666666666667,
+            "value": 1118481,
+            "nodeType": "Color"
+        },
+        {
+            "uuid": "FDB2E609-9A6C-4916-B38C-E04612D7D5D9",
+            "type": "phong",
+            "color": "540BF348-FF1A-408A-9D87-C92D7FF8A8E7",
+            "specular": "B7C1EE95-C617-462B-B230-62C701C017ED",
+            "shininess": "EE69054E-041D-404D-B64C-8F78E98AA341",
+            "shadingAlpha": "23A077D5-12EA-4ECB-9263-3AD701200A1C",
+            "shadingBlend": "72A0F6F2-A24E-4FBF-A918-DE380C524781",
+            "alpha": "66BD247F-F787-4F1F-A001-65D0B1D15F17",
+            "nodeType": "Phong"
+        },
+        {
+            "uuid": "66BD247F-F787-4F1F-A001-65D0B1D15F17",
+            "type": "f",
+            "value": 1,
+            "nodeType": "Float"
+        }
+    ],
+    "frames": {
+        "currentId": "default-frame-id",
+        "coords": [353.0132788559755, 180],
+        "frames": {
+            "default-frame-id": {
+                "id": "default-frame-id",
+                "name": "Frame",
+                "preset": "fullscreen",
+                "size": [1920, 979],
+                "coords": [0, 0],
+                "editorScale": 1,
+                "backgroundColor": { "r": 25, "g": 25, "b": 25, "a": 0 },
+                "color": { "r": 0, "g": 0, "b": 0, "a": 0.5 },
+                "guides": true,
+                "hasSceneScaling": false,
+                "sceneScale": 1
+            }
+        }
+    },
+    "assets": { "materials": {} },
+    "needsTransmission": false,
+    "editor": {
+        "orbitControls": {
+            "useKeyEvents": false,
+            "enableDamping": true,
+            "enablePan": true,
+            "enableZoom": true,
+            "enableRotate": true,
+            "rotationLimitsMode": 0,
+            "rotationVerticalOffset": {
+                "min": 1.5707963267948966,
+                "max": 1.5707963267948966
+            },
+            "rotationHorizontalOffset": {
+                "min": 1.5707963267948966,
+                "max": 1.5707963267948966
+            },
+            "autoRotate": false,
+            "autoRotateSpeed": 2,
+            "autoRotateClockwise": true
+        },
+        "helperState": true,
+        "publish": { "type": 2, "web": { "logo": true } },
+        "settings": { "wireframe": false, "helpers": true }
+    }
+}
